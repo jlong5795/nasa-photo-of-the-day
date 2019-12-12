@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './Card';
+import Heading from './Heading';
+import Image from './Image';
+import Explanation from './Explanation';
 
 
 export default function APOD(){
@@ -19,7 +21,9 @@ export default function APOD(){
   }, []);
     return (
       <div className='apoc-card'>
-        <Card title={apod.title} date={apod.date}/>
+        <Heading title={apod.title} date={apod.date}/>
+        <Image url={apod.url} copyright={apod.copyright} />
+        <Explanation explanation={apod.explanation} />
       </div>
     )
 };
