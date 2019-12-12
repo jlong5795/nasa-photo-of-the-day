@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import APOD from './components/APOD';
+import Heading from './components/Heading';
 
 
 function App() {
