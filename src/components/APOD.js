@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import axios from 'axios';
 import Heading from './Heading';
 import Image from './Image';
@@ -13,7 +14,7 @@ export default function APOD(){
       .then(response => {
         setApod(response.data);
         console.log("Response", response.data);
-        console.log("APOD", apod);
+        
       })
       .catch(error => {
         console.log('The data was not returned.', error);
@@ -21,6 +22,12 @@ export default function APOD(){
   }, []);
     return (
       <div className='apoc-card'>
+        
+
+
+
+
+
         <Heading title={apod.title} date={apod.date}/>
         <Image url={apod.url} copyright={apod.copyright} />
         <Explanation explanation={apod.explanation} />
