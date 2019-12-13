@@ -1,8 +1,9 @@
 import React from 'react';
+import { CardText } from 'reactstrap';
 
 const Explanation = props => {
     return(
-        <p>{props.explanation}</p>
+        <CardText>{props.explanation}</CardText>
     )
 }
 

@@ -1,10 +1,11 @@
 import React from 'react';
+import { CardImg } from 'reactstrap';
 
 const Image = props => {
     return(
         <div className='image-container'>
-            <img src={props.url} alt='APOD - NASA'/>{/*Need to update src*/}
-            <p>Copyright: {props.copyright}</p>
+            <CardImg top width="100%" src={props.url} alt='APOD - NASA' />
+            
         </div>
     )
 }

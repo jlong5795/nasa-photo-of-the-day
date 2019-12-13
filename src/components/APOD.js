@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import { Button, Card, CardBody, UncontrolledCollapse } from 'reactstrap';
 import axios from 'axios';
 import Heading from './Heading';
 import Image from './Image';
@@ -22,15 +22,13 @@ export default function APOD(){
   }, []);
     return (
       <div className='apoc-card'>
-        
-
-
-
-
-
-        <Heading title={apod.title} date={apod.date}/>
-        <Image url={apod.url} copyright={apod.copyright} />
-        <Explanation explanation={apod.explanation} />
+        <Card>
+          <CardBody>
+            <Heading title={apod.title} date={apod.date} copyright={apod.copyright} />
+            <Image url={apod.url} />
+            <Explanation explanation={apod.explanation} />
+          </CardBody>
+        </Card>
       </div>
     )
 };

@@ -1,9 +1,12 @@
 import React from 'react';
+import { CardTitle, CardSubtitle } from 'reactstrap';
 
 const Heading = props => {
     return (
         <div>
-            <h2>{props.title} {props.date}</h2>
+            <CardTitle>{props.title}</CardTitle>
+            <CardSubtitle>{props.date}</CardSubtitle>
+            <p>Copyright: {props.copyright}</p>
         </div>
     )
 }
